@@ -1,21 +1,12 @@
-const cors = require('cors');
 const express = require('express');
-const mongoose = require('mongoose');
-
-const { username, password, dbName } = require('./config.json');
+const path = require('path');
 
 const app = express();
 const port = 8888;
 
-app.use(cors());
-app.use(express.json());
+const mongo = require('./db');
 
-app.listen(port, () => {
+app.listen(port, async () => {
     console.log(`Server is listening on port ${port}`);
+    await mongo.connect();
 });
-
-const URL = `mongodb+srv://${username}:${password}@${dbName}.ezaqpru.mongodb.net/?retryWrites=true&w=majority`;
-mongoose
-    .connect(URL)
-    .then(() => console.log('Connected to Mongo'))
-    .catch(() => console.log('Failed to Connect'));

@@ -1,5 +1,5 @@
 {
-  "name": "custom-node-module",
+  "name": "tvmaze-api",
   "version": "1.0.0",
   "description": "Custom node module for Stateless Express.js Server Application",
   "main": "api.js",
