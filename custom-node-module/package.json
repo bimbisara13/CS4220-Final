@@ -1,0 +1,14 @@
+{
+  "name": "custom-node-module",
+  "version": "1.0.0",
+  "description": "Custom node module for Stateless Express.js Server Application",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bimbisara P",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "^8.0.9"
+  }
+}
