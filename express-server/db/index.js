@@ -41,7 +41,8 @@ const mongo = () => {
                 {
                     $set: { lastSearched: new Date() },
                     $inc: { searchCount: 1 }
-                })
+                }
+            );
         } catch (error) {
             console.log(error);
         }
