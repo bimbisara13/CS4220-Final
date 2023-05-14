@@ -8,6 +8,9 @@ const mongo = require('./db');
 const search = require('./routes/search');
 app.use('/search', search);
 
+const history = require('./routes/history');
+app.use('/history', history);
+
 app.listen(port, async () => {
     console.log(`Server is listening on port ${port}`);
     await mongo.connect();
